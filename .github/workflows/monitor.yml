@@ -28,11 +28,11 @@ jobs:
 
       - name: Run monitor once
         env:
-          TARGET_URL: ${{ vars.TARGET_URL || 'https://hub.hotelstory.com/MTAwMDMwMw/calendar?v_caldate=2026-10' }}
-          TARGET_DATE: ${{ vars.TARGET_DATE || '2026-10-03' }}
-          HTTP_TIMEOUT_SECONDS: ${{ vars.HTTP_TIMEOUT_SECONDS || '10' }}
-          SMTP_HOST: ${{ vars.SMTP_HOST || 'smtp.gmail.com' }}
-          SMTP_PORT: ${{ vars.SMTP_PORT || '465' }}
+          TARGET_URL: https://hub.hotelstory.com/MTAwMDMwMw/calendar?v_caldate=2026-10
+          TARGET_DATE: "2026-10-03"
+          HTTP_TIMEOUT_SECONDS: "10"
+          SMTP_HOST: smtp.gmail.com
+          SMTP_PORT: "465"
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
