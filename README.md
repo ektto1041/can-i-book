@@ -46,7 +46,7 @@ cd /Users/park/Documents/can-i-book && source .venv/bin/activate && python3 moni
 ## GitHub Actions
 
 public repository로 운영하면 GitHub-hosted runner를 무료로 쓸 수 있습니다.
-이 저장소에는 1분처럼 보이도록 `5개 cron`을 오프셋으로 나눈 workflow가 포함되어 있습니다.
+이 저장소에는 `5분마다 1회` 실행되는 GitHub Actions workflow가 포함되어 있습니다.
 
 workflow 파일:
 
@@ -97,8 +97,8 @@ Repository `Settings -> Secrets and variables -> Actions -> Variables`에 아래
 ### 참고
 
 - GitHub Actions의 공식 최소 스케줄 간격은 5분입니다.
-- 이 저장소는 `0,1,2,3,4분` 오프셋으로 5개 cron을 둬서 체감상 1분처럼 분산 실행합니다.
-- 스케줄 workflow는 GitHub 부하 상황에 따라 약간 지연되거나 드물게 누락될 수 있습니다.
+- 이 저장소는 `*/5 * * * *` cron으로 5분마다 실행됩니다.
+- 스케줄 workflow는 GitHub 부하 상황에 따라 약간 지연될 수 있습니다.
 
 ## Environment Variables
 
